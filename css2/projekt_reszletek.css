@@ -1,0 +1,252 @@
+/* lista */
+.ul {  
+  list-style-type: none; /* nincs alapértelmezett pont */
+  padding: 0; /* belső térköz */
+  display: flex; /* flexbox */
+  flex-direction: column; /* egymás alatt ??????????? */
+  align-items: center; /* középre */
+}
+
+/* fájlok számától lefele */
+h3 {  
+  text-align: center; /* középre */
+  font-size: 20px; /* betűméret */
+}
+
+/* leírás és név */
+.project-description,
+.project-name {  
+  word-break: break-word; /* tördeli a szavakat, ha túl hosszúak */
+  overflow-wrap: break-word; /* tördelés miatt */
+  white-space: pre-wrap; /* sorvégi tördelés */
+}
+
+/* kitöltési cél progrerss bar konténer */
+#progress-container {  
+  width: 80%; /* szélesség */
+  background-color: #e0e0e0; /* szürkés háttérszín */
+  border-radius: 5px; /* lekerekített sarkok */
+  height: 20px; /* magasság */
+  margin: 10px auto; /* margó */
+}
+/* kitöltési cél progrerss bar */
+#progress-bar {  
+  height: 100%; /* magasság */
+  width: 0; /* szélesség eleinte 0 */
+  background-color: #4caf50; /* zöld háttér */
+  border-radius: 5px; /* lekerekített sarkok */
+  transition: width 0.3s; /* átmenet */
+}
+
+/* konténer */
+.container {  
+  background-color: white; /* fehér háttér */
+  border-radius: 10px; /* lekerekített sarkok */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+  max-width: 1000px; /* max szélesség */
+  margin: 0 auto; /* középre  */
+  margin-top: 100px; /* fenti margó */
+}
+
+/* borítókép */
+.cover-image {  
+  width: 100%; /* szélesség */
+  max-width: 200px; /* max szélesség */
+  max-height: 200px; /* max magasság */
+  border-radius: 10px; /* lekerekített sarkok */
+  margin: 10px auto 0; /* margók felső, baljobb, alsó */
+  display: block; /* blokk */
+  height: auto; /* magasság */
+}
+/* borító igazítása */
+.cover-image-wrapper {  
+  padding: 10px; /* belső térköz */
+  text-align: center; /* kép középre */
+}
+
+/* név */
+.project-name {  
+  font-size: 20px; /* betűméret */
+  margin: 10px 0; /* tetején és alján margó */
+  text-align: center; /* középre */
+}
+
+/* leírás */
+.project-description {  
+  margin: 10px 0; /* tetején és alján margó */
+ /* max-height: 100px; /* max magasság */
+  overflow: hidden; /* elrejti ha túl sok */
+  text-overflow: ellipsis; /* ... a végére, ha a szöveg túl hosszú */
+  line-height: 1.5; /* sor magassága  */
+  font-size: 20px; /* betűméret */
+  text-align: center; /* középre */
+}
+
+/* fájlok előnézet*/
+.media-preview {  
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* többsoros */
+  gap: 10px; /* rés a képek között */
+}
+/* fájlok konténer */
+.media-container {  
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* többsoros elrendezés */
+  gap: 10px; /* rés a képek között */
+  justify-content: center; /* középre */
+  margin-top: 20px; /* felső margó */
+}
+
+/* fájlok (képek, videók) */
+.media-item {  
+  width: 100px; /* fix szélesség */
+  height: 100px; /* fix magasság */
+  margin-bottom: 20px; /* alsó margó */
+  text-align: center; /* középre */
+  overflow: hidden; /* ha túl sok eltűnik */
+  border-radius: 10px; /* lekerekített sarkok */
+}
+
+/* kép és vidi */
+.media-item img,
+.media-item video {  
+  width: 100%; /* szélesség */
+  height: 100%; /* magasság */
+  object-fit: cover; /* arányok jók legyenek */
+}
+
+/* reszponzív, tablet pl */
+@media screen and (max-width: 768px) {  
+  .media-item {  
+    width: 150px; /* kisebb szélesség */
+    height: 150px; /* kisebb magasság */
+  }
+}
+/* reszponzív, teló pl */
+@media screen and (max-width: 480px) {  
+  .media-item {  
+    width: 100px; /* kisebb szélesség */
+    height: 100px; /* kisebb magasság */
+  }
+}
+
+/* kitöltések száma */
+.kitoltesek-szama {  
+  text-align: center; /* középre */
+  margin-top: 20px; /* felső margó */
+}
+
+/* gombok konténer */
+.button-container {  
+  text-align: center; /* középre */
+  margin: 20px 0; /* margó */
+}
+
+
+/* módosítás gomb */
+.edit-button {  
+  background-color: #007bff; /* kék háttér */
+  color: white; /* fehér szöveg */
+  padding: 10px 20px; /* belső térköz */
+  margin: 0 10px; /* margó */
+  border: none; /* nincs keret */
+  border-radius: 5px; /* lekerekített sarkok */
+  cursor: pointer; /* egér */
+  font-size: 16px; /* betűméret */
+  transition: background-color 0.3s; /* háttérszín váltás */
+}
+/* módosítás gomb ha rávisszü az egeret */
+.edit-button:hover {  
+  background-color: #0056b3; /* sötétebb kék */
+}
+
+/* törlés gomb */
+.delete-button {  
+  background-color: red; /* piros háttér */
+  color: white; /* fehér szöveg */
+  padding: 10px 20px; /* belső térköz */
+  margin: 0 10px; /* margó*/
+  border: none; /* nincs keret */
+  border-radius: 5px; /* lekerekített sarkok */
+  cursor: pointer; /* egér */
+  font-size: 16px; /* betűméret */
+  transition: background-color 0.3s; /* háttérszín váltás */
+}
+/* törlés gomb ha rávisszü az egeret */
+.delete-button:hover {  
+  background-color: darkred; /* sötétebb piros */
+}
+
+/* export gomb */
+.export-button {  
+  background-color: green; /* zöld háttér */
+  color: white; /* fehér szöveg */
+  padding: 10px 20px; /* belső térköz */
+  margin: 0 10px; /* margó */
+  border: none; /* nincs keret */
+  border-radius: 5px; /* lekerekített sarkok */
+  cursor: pointer; /* egér */
+  font-size: 16px; /* betűméret */
+  transition: background-color 0.3s; /* háttérszín váltás */
+}
+/* export gomb ha rávisszü az egeret */
+.export-button:hover {  
+  background-color: darkgreen; /* sötétebb zöld */
+}
+
+/* több kép */
+.more-images {  
+  margin-top: 20px; /* felső margó */
+  text-align: center; /* középre */
+  font-weight: bold; /* félkövér */
+  color: #555; /* szürke */
+}
+
+/* diagram konténer */
+.chart-container {  
+  display: flex; /* flexbox */
+  justify-content: center; /* középre */
+  align-items: center; /* középre */
+  width: 100%; /* szélesség */
+}
+
+/* törölt elemek */
+.legend-item-removed span {  
+  color: grey !important; /* szürke */
+  text-decoration: line-through !important; /* áthúzott szöveg */
+}
+
+/* toplistás képek konténer */
+.top-kepek-container {  
+  text-align: center; /* középre */
+  margin-top: 20px; /* felső margó */
+}
+/* toplistás képek */
+.top-kepek {  
+  display: flex; /* flexbox */
+  justify-content: center; /* középre */
+  gap: 15px; /* rés */
+}
+
+/* topkép*/
+.top-kep {  
+  border: 1px solid #ddd; /* szürke keret */
+  border-radius: 8px; /* lekerekített sarkok */
+  padding: 10px; /* belső térköz */
+  text-align: center; /* középre */
+  width: 200px; /* szélessége */
+  background: #f9f9f9; /* háttér */
+  margin: 10px; /* margó */
+}
+
+/* kép */
+.top-kep img {  
+  max-width: 100%; /* max szélesség */
+  border-radius: 5px; /* lekerekített sarkok */
+}
+
+/* kép alatti szöveg */
+.top-kep p {  
+  margin: 5px; /* alsó margó */
+  font-size: 1em; /* betűméret */
+}

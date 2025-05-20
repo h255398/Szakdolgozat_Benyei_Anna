@@ -1,0 +1,75 @@
+/* lényegi rész */
+.content {
+  display: flex; /* flexbox */
+  justify-content: center; /* középre */
+  align-items: center; /* középre */
+}
+/* reg űrlap */
+.form-container {
+  background-color: #fff; /* háttér */
+  padding: 20px; /* belső térköz */
+  border-radius: 8px; /* lekerekített sarkok */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+  width: 100%; /* szélesség */
+  max-width: 400px; /* max szélesség */
+  animation: slideIn 0.5s ease-out; /* animáció balról beúszás */
+}
+
+/* animáció balról beúszás */
+@keyframes slideIn {
+  from {
+    transform: translateX(
+      -100%
+    ); /* kezdetben bal oldalon kívül */
+    opacity: 0; /* átlátszó */
+  }
+  to {
+    transform: translateX(0); /* végső pozi középen */
+    opacity: 1; /* látható */
+  }
+}
+
+/* felhasznnév stb form */
+form {
+  display: flex; /* flexbox */
+  flex-direction: column; /* függőlegesen elrendezve */
+}
+
+/* felhasznnév címke*/
+label {
+  margin: 10px 0 5px; /* 10px margó felül, 5px alul */
+}
+
+/* szöveg, email és jelszó */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px; /* belső térköz */
+  border: 1px solid #ccc; /* szürke szegély */
+  border-radius: 4px; /* lekerekített sarkok */
+}
+
+/* reg/bejel gomb */
+input[type="submit"] {
+  background-color: #007bff; /* kék háttér */
+  color: white; /* fehér szöveg */
+  border: none; /* nincs keret */
+  border-radius: 5px; /* lekerekített sarkok */
+  padding: 10px 20px; /* belső térköz */
+  font-size: 20px; /* betűméret */
+  font-weight: bold; /* félkövér */
+  cursor: pointer; /* egér */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* animáció */
+  margin-top: 20px; /* felső margó */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* árnyék */
+  height: 50px; /* magasság */
+}
+/* reg/bejel gomb ha fölé visszük az egeret */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* sötétebb kék */
+  transform: scale(1.05); /* kicsit nagyobb méret */
+}
+/* reg/bejel gomb ha rákattintünk */
+input[type="submit"]:active {
+  transform: scale(0.95); /* nyomáskor kisebb lesz */
+}

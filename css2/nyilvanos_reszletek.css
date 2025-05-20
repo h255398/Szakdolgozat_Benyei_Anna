@@ -1,0 +1,34 @@
+/* konténer lényegi rész részletek */
+.container {
+  margin-top: 60px; /* felsőmargó */
+  padding: 60px; /* belső térköz */
+  text-align: center; /* középre */
+}
+/* kitöltés gomb */
+.button {
+  display: inline-block; /* inline blokk */
+  padding: 10px 20px; /* belső térköz, 10px felül és alul, 20px jobbra és balra */
+  margin-top: 20px; /* margó felül */
+  background-color: #007bff; /* kék háttér */
+  color: white; /* fehér szöveg */
+  text-decoration: none; /* nincs aláhúzás */
+  border-radius: 5px; /* lekerekített sarkok */
+}
+/* kitöltés gomb ha rávisszük az egeret */
+.button:hover {
+  background-color: #0056b3; /* sötétebb kék */
+}
+/* vissza gomb*/
+.back-button {
+  background-color: gray; /* szüekw háttér */
+}
+/* vissza gomb ha rávisszük az egeret */
+.back-button:hover {
+  background-color: darkgray; /* sötétebb szürke */
+}
+/* leírások */
+.container p {
+  word-break: break-word; /* ha túl hosszú új sor */
+  overflow-wrap: break-word; /* tördelés miatt */
+  white-space: pre-wrap; /* sortörés megtartása */
+}

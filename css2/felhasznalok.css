@@ -1,0 +1,56 @@
+/* konténer */
+.container {
+  margin-top: 130px; /* hogy nav alatt legyen */
+}
+
+/* táblázat */
+table {
+  width: 80%; /* szélesség */
+  margin-left: auto; /* középre, bal automatikus margó */
+  margin-right: auto; /* Közép, jobb automatikus margó */
+  border: 5px solid black; /* keret */
+  border-collapse: collapse; /* cellák közötti vonalak összevonása */
+}
+
+/* fejléc, cellák */
+th,
+td {
+  border: 1px solid black; /* keret */
+  padding: 8px; /* belső térköz*/
+  text-align: center; /* középre */
+}
+
+/* fejléc*/
+th {
+  background-color: #f2f2f2; /* világos szürke háttér */
+}
+
+/* gombok */
+.action-button {
+  padding: 8px 16px; /* belső térköz */
+  border: none; /* nincs keret */
+  border-radius: 4px; /* lekerekített sarkok */
+  cursor: pointer; /* egérként jelenik meg */
+}
+
+/* tiltás gomb */
+.deactivate {
+  background-color: #ff4444; /* piros háttér */
+  color: white; /* fehér szöveg */
+}
+
+/* tiltás gomb ha rávisszük az egeret */
+.deactivate:hover {
+  background-color: #f44336; /* sötétebb piros */
+}
+
+/* feloldás gomb*/
+.activate {
+  background-color: #4caf50; /* zöld háttér */
+  color: white; /* fehér szöveg */
+}
+
+/* feloldás gomb ha rávisszük az egeret */
+.activate:hover {
+  background-color: #45a049; /* sötétebb zöld */
+}

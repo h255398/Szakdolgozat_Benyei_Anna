@@ -1,0 +1,90 @@
+/* konténer */
+.container {  
+  margin-top: 130px; /*felső marfó */  
+}
+/* projekt nevek ha rákattintok*/
+.modal {  
+  display: none; /* rejtve legyen kezdetben */  
+  position: fixed; /* fix pozi */
+  z-index: 1; /* minden felett */
+  padding-top: 100px; /* felső térköz növelése */
+  left: 0; /* bal */
+  top: 0; /* fent */
+  width: 100%; /* szélesség */
+  height: 100%; /* magassága */
+  overflow: auto; /* ha túl hosszú a szöveg akkor görgethető legyen */
+  background-color: rgba(0, 0, 0, 0.4); /* árnyékos */
+}
+/* ebben van ténylegesen a projekt neve*/
+.modal-content {  
+  background-color: #fefefe; /* fehér háttér */
+  margin: auto; /* középre*/
+  padding: 20px; /* belső térköz */
+  border: 1px solid #888; /* szegély */
+  width: 80%; /* szélesség */
+  max-width: 500px; /* max szélesség */
+  border-radius: 4px; /* lekerekített sarkok */
+  white-space: pre-wrap; /* hosszú szöveg több sorba */
+  word-wrap: break-word; /* szavak tördelése akkor is, ha nincs szóköz */
+  overflow-wrap: break-word; /* ha túl hosszú a szó tördelje */
+}
+/* kis x a bezáráshoz*/
+.close {  
+  color: #aaa; /* világosszürke háttér */
+  float: right; /* jobbra igazítás */
+  font-size: 28px; /* nagyobb méret */
+  font-weight: bold; /* félkövér */
+}
+/* kis x ha fölé visszük az egeret*/
+.close:hover{  
+  color: black; /* fekete */
+  text-decoration: none; /* nincs aláhúzást */
+  cursor: pointer; /* egér */
+}
+/* táblázat */
+table {
+  width: 80%; /* szélesség */
+  margin-left: auto; /* középre, bal automatikus margó */
+  margin-right: auto; /* Közép, jobb automatikus margó */
+  border: 5px solid black; /* keret */
+  border-collapse: collapse; /* cellák közötti vonalak összevonása */
+}
+
+/* fejléc, cellák */
+th,
+td {
+  border: 1px solid black; /* keret */
+  padding: 8px; /* belső térköz*/
+  text-align: center; /* középre */
+}
+
+/* fejléc*/
+th {
+  background-color: #f2f2f2; /* világos szürke háttér */
+}
+/* export konténer */
+.export-container {  
+  display: flex; /* flexbox */
+  justify-content: center; /* középre */
+  align-items: center; /* középre */
+  height: auto; /* magasság */
+  margin: 10px 0; /* felső és alsó margó */
+  padding: 10px; /* belső térköz */
+}
+/* export gomb */
+.export-button {  
+  background-color: #4caf50; /* zöld háttér */
+  color: white; /* fehér szöveg */
+  padding: 8px 16px; /* belső térköz */
+  text-align: center; /* középre */
+  text-decoration: none; /* nincs aláhúzás */
+  display: inline-block; /* inline blokk */
+  border: none; /* nincs szegély */
+  cursor: pointer; /* Aegér */
+  border-radius: 4px; /* lekerekített sarkok */
+  font-size: 16px; /* betűméret */
+}
+/* export gomb ha az egeret fölé visszük */
+.export-button:hover {  
+  background-color: #45a049; /* sötétebb zöld */
+}

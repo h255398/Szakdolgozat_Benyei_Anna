@@ -1,0 +1,47 @@
+/* form űrlap */
+.form-container {
+  max-width: 600px; /* max szélesség */
+}
+/* kérdések konténer */
+.question-container {
+  margin-top: 20px; /* felső margó */
+  border: 1px solid #ccc; /* szürke keret */
+  padding: 10px; /* belső térköz */
+  border-radius: 5px; /* lekerekített sarkok */
+}
+/* kérdés eltávolítása */
+.remove-question {
+  cursor: pointer; /* egér */
+  color: white; /* piros */
+  background-color: red;/* piros háttér */
+  margin-top: 10px; /* margó fent */
+  border-radius: 5px; /* lekerekített sarkok */
+}
+/* kérdés eltávolítása ha fölé visszük az egeret */
+.remove-question:hover{
+  background-color: darkred; /* sötétebb piros */
+}
+/* új kérdés hozzáadás gomb */
+button {
+  padding: 10px 15px; /* belső térköz */
+  width: 40%; /* szélesség */
+  background-color: #4ca750; /* zöld háttér */
+  color: white; /* fehér szöveg */
+  border-radius: 5px; /* lekerekített sarkok */
+}
+/* új kérdés hozzáadás gomb ha fölé visszük az egeret */
+button:hover {
+  background-color: #45a049; /* sötétebb zöld */
+}
+/* kitöltési cél */
+.small-input {
+  width: 150px; /* kisebb szélesség */
+  padding: 5px; /* belső térköz */
+  font-size: 14px; /* betűméret */
+}
+.custom-question-select {
+  width: 80%;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+}

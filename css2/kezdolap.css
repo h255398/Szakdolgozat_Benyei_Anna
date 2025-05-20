@@ -1,0 +1,97 @@
+/* alap bodyra*/
+body {
+  font-family: Arial, sans-serif; /* betű */
+  background-image: url("../oldalra_kepek/hatterkep.jfif"); /* háttérkép */
+  background-size: cover; /* háttér teljesen látszódjon, töltse ki a teret */
+  background-position: center; /* középre */
+  background-repeat: no-repeat; /* ne ismétlődjön */
+  background-attachment: fixed; /* fix legyen */
+}
+
+/*fejléc*/
+header {
+  position: fixed; /* fix pozi az oldal tetején */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* fehér háttér */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+  padding: 10px; /* belső térköz */
+  z-index: 1000; /* minden felett legyen */
+  display: flex; /* flexbox */
+  justify-content: space-between; /* fejléc elemei egyenletesen rendeződjenek */
+  align-items: center; /* középre */
+}
+
+/* fejléc*/
+header h1 {
+  margin: 0; /* ne legyen margó */
+}
+
+/* másik szöveg az üdvözlő */
+h2 {
+  text-align: center; /* középre */
+  font-size: 2.5em; /* betűméret */
+}
+
+/* bekezdések */
+p {
+  text-align: center; /* középre */
+  font-size: 1.5em; /* betűméret */
+}
+
+/* linkek */
+.auth-links {
+  display: flex; /* flexbox */
+  gap: 15px; /* térköz köztük */
+}
+
+/* linkek stílusa */
+.auth-links a {
+  color: #4caf50; /* zöld szöveg */
+  text-decoration: none; /* nincs aláhúzás */
+}
+
+/* nav sáv */
+nav {
+  background-color: #4caf50; /* zöld háttér */
+  width: 100%; /* szélesség */
+  position: fixed; /* fix pozi */
+  top: 60px; /* fejléc alatt */
+  z-index: 999; /* fejléc alatt, de a bevezető fölött */
+  margin-bottom: 20px;
+}
+
+/* nav lista*/
+nav ul {
+  margin: 0; /* nincs margó*/
+  padding: 0; /* nincs térköz*/
+  list-style: none; /* nincs listajel */
+  display: flex; /* flexbox */
+  justify-content: space-between; /* elemek egyenletesen rendeződjenek */
+}
+
+/* navlist elemek */
+nav ul li {
+  flex: 1; /* egyenlő szélesség mindennek */
+}
+
+/* navlist linkek*/
+nav ul li a {
+  display: block; /* blokk */
+  color: white; /* fehér szöveg */
+  text-align: center; /* középre */
+  padding: 14px 0; /* belső térköz */
+  text-decoration: none; /* nincs aláhúzás */
+}
+
+/* navlist linkek ha az egeret fölé visszük */
+nav ul li a:hover {
+  background-color: #45a049; /* sötétebb zöld */
+}
+
+/* tartalom üdvözöljük blablabla */
+.content {
+  padding: 20px; /* belső térköz*/
+  margin-top: 120px; /* fejléc és nav alatt */
+}

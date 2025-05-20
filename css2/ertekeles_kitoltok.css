@@ -1,0 +1,137 @@
+/* fejléc */
+header {
+  text-align: center; /* középre */
+  padding: 20px 0; /* belső térköz a tetején és alján */
+  background-color: #4ca750; /* zöldes háttér */
+  color: white; /* fehér szöveg */
+}
+
+h1 {
+  margin: 0; /* ne legyen margó */
+}
+
+/* alap, bodyra */
+body {
+  font-family: Arial, sans-serif; /* betűtípus */
+  margin: 0; /* ne legyen margó */
+  padding: 20px; /* belső térköz */
+  background-image: url("../oldalra_kepek/hatterkep.jfif"); /* háttérkép */
+  background-size: cover; /* háttér teljesen látszódjon, töltse ki a teret */
+  background-position: center; /* középre */
+  background-repeat: no-repeat; /* ne ismétlődjön */
+  background-attachment: fixed; /* háttér fix */
+}
+
+/* fő rész ahol lesznek a kérdések */
+.container {
+  margin: 60px auto; /* középre igazítás, margó a tetején */
+  padding: 20px; /* belső térköz */
+  max-width: 600px; /* maximális szélesség */
+  background-color: #f9f9f9; /* világos háttérszín */
+  border-radius: 10px; /* lekerekített sarkok */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+}
+
+/* kérdések */
+form {
+  display: flex; /* flexbox */
+  flex-direction: column; /* egymás alá */
+  gap: 15px; /* térköz*/
+}
+/* instrukció 
+.instructions{
+  margin-bottom: 10px; 
+}*/
+/* kérdéstípusok */
+input[type="text"],
+input[type="number"],
+select {
+  width: 90%; /* teljes szélesség */
+  padding: 10px; /* 10px belső margó */
+  border: 1px solid #ccc; /* világos szürke szegély */
+  border-radius: 4px; /* lekerekített sarkok */
+}
+
+/* gomb */
+.button {
+  padding: 10px 20px; /* belső térköz */
+  background-color: blue; /* kék háttérszín */
+  color: white; /* fehér szöveg */
+  border: none; /* nincs szegély */
+  border-radius: 5px; /* Lólekerekített sarkok */
+  cursor: pointer; /* egérként jelenik meg */
+  align-self: center; /* középre */
+}
+
+/* gomb ha egeret fölé visszük */
+.button:hover {
+  background-color: darkblue; /* sötétebb kék */
+}
+
+/* hibaüzenetek */
+.error {
+  color: red; /* piros szín */
+  text-align: center; /* középre */
+  margin-top: 10px; /* 10px térköz a hibaüzenet felett */
+}
+
+/* vissza és tovább gombok */
+.back-button,
+.continue-button {
+  display: inline-block; /* inline-block */
+  margin-top: 20px; /* 20px margó felette */
+  text-decoration: none; /* aláhúzás eltávolítása */
+  padding: 10px 20px; /* belső térköz */
+  background-color: #007bff; /* kék háttérszín */
+  color: white; /* fehér szöveg */
+  border-radius: 5px; /* lekerekített sarkok */
+  align-self: center; /* középre */
+}
+
+/* Vissza gomb */
+.back-button {
+  background-color: red; /* piros */
+}
+
+/* tovább gomb ha fölé visszük az egeret */
+.continue-button:hover {
+  background-color: #0056b3; /* sötétebb kék */
+}
+
+/* Vissza gomb ha fölé visszük az egeret */
+.back-button:hover {
+  background-color: darkred; /* sötétebb piros */
+}
+
+/* gomb konténer (egyvonalban) */
+.button-container {
+  display: flex; /* flexbox */
+  justify-content: space-between; /* egyenletes elosztás */
+}
+
+/* ombok közötti távolság */
+.button-container a,
+.button-container button {
+  margin-right: 10px; /* 10px térköz a gombok között */
+}
+
+.checkbox-container {
+  margin-bottom: 20px; /* margó a checkbox konténer alján */
+  padding: 10px 0; /* felső és alsó padding */
+}
+
+.checkbox-container label {
+  display: inline-block;
+  margin-right: 10px; 
+}
+
+.checkbox-container a {
+  margin-bottom: 5px; 
+  display: inline-block; 
+  color: #007BFF; 
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px; 
+}
+

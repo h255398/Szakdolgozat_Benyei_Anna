@@ -1,0 +1,184 @@
+/* form konténer modositas felület*/
+.form-container {
+  background-color: white; /* fehér háttér */
+  padding: 20px; /* belső terköz */
+  border-radius: 8px; /* lekerekített sarkok */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+  width: 80%; /* szélesség */
+  max-width: 600px; /* maximális szélesség */
+  margin: 0px auto; /* középre */
+  animation: fadeIn 0.5s; /* animáció megjelenéses*/
+}
+
+/* animáció megjelenéses*/
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* kezdetben átlátszó */
+  }
+  to {
+    opacity: 1; /* fokozatosan látható lesz */
+  }
+}
+
+/* név,leírás stbstb */
+label {
+  margin: 10px 0 5px; /* 10px margó felül, 5px alul */
+}
+
+/* szöveg, email, jelszó  */
+input[type="text"]:not(.small-input), /* és nem .small-inputos*/
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 90%; /* szélesség */
+  margin: 10px 0; /* felső és alsó margó */
+  padding: 10px; /* belső térköz */
+  border: 1px solid #ccc; /* világos szürke keret */
+  border-radius: 4px; /* lekerekített sarkok */
+}
+
+/* fájlkiválasztás */
+input[type="file"] {
+  margin: 10px 0; /* felső és alsó margó */
+}
+
+/* gombok (mentés, vissza) */
+input[type="submit"] {
+  background-color: #4caf50; /* zöld háttér */
+}
+input[type="button"] {
+  background-color: #dc3545; /* piros háttér */
+}
+
+/* gombok (mentés, vissza) */
+input[type="submit"],
+input[type="button"] {
+  color: white; /* fehér szöveg */
+  padding: 10px 20px; /* belső térköz */
+  border: none; /* nincs keret */
+  border-radius: 5px; /* lekerekített sarkok */
+  cursor: pointer; /* egérként jelenik meg */
+  margin-top: 10px; /* felső margó */
+  font-size: 16px; /* betűméret */
+  text-align: center; /* középre */
+  width: 100%; /* szélesség */
+  display: block; /* blokk */
+}
+
+/* gombok ha rávisszük az egeret (mentés, vissza) */
+input[type="submit"]:hover {
+  background-color: #45a049; /* sötétebb zöld */
+}
+input[type="button"]:hover {
+  background-color: #c82333; /* sötétebb piros */
+}
+
+/* képek előnézet */
+.media-preview {
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* lehetnek több sorba */
+  gap: 10px; /* elemek közötti táv */
+}
+
+/* képek konténer */
+.media-container {
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* lehetnek több sorba */
+  gap: 10px; /* elemek közötti táv */
+  justify-content: center; /* középre */
+  margin-top: 20px; /* felső margó */
+}
+
+/* képek és videók */
+.media-item {
+  width: 100px; /* szélesség */
+  height: 100px; /* magasság */
+  margin-bottom: 20px; /* alsó margó */
+  text-align: center; /* középre */
+  overflow: hidden; /* ha túl sok akkor eltűnik */
+  border-radius: 10px; /* lekerekített sarkok */
+}
+
+/*fill:	teljes kitöltés de torzulhat.
+cover:	teljes kitöltés de levág a képből lehet.
+contain:	arányos kicsinyítés, üres tér lehet.
+none:	eredeti méret, kilóghat.
+scale-down:	kisebb méret, none és cintain között??.*/
+
+/* kép */
+.media-item img {
+  width: 100%; /* szélesség */
+  height: 100%; /* magasság */
+  object-fit: cover; /* arányok jók legyenek */
+}
+/* video */
+.media-item video {
+  height: auto; /* automatikus magasság*/
+  object-fit: contain; /* eredeti arány */
+}
+
+/* reszponzivitás kisebb képernyőre (tablet pl) */
+@media screen and (max-width: 768px) {
+  .media-item {
+    width: 150px; /* kisebb szélesség */
+    height: 150px; /* kisebb magasság */
+  }
+}
+
+/* reszponzivitás kisebb képernyőre (teló pl) */
+@media screen and (max-width: 480px) {
+  .media-item {
+    width: 100px; /* isebb szélesség */
+    height: 100px; /* kisebb magasság */
+  }
+}
+
+/* kisebb szövegekre */
+small {
+  font-weight: bold; /* dőlt betű*/
+}
+/* meglévő kérdésekre, kitöltési célra */
+.small-input {
+  width: 150px; /* Kisebb szélesség */
+  padding: 5px; /* Kisebb belső margó */
+  margin: 5px; /* Kisebb külső margó */
+  font-size: 14px; /* Kisebb betűméret */
+}
+
+/* gombok (új kérdés, eltávolításkérdés, összes fájl megjel */
+button {
+  display: inline-block; /* inline blokk */
+  margin-top: 20px; /* felső margó */
+  text-decoration: none; /* aláhúzás nincs */
+  padding: 10px 20px; /* belső térköz */
+  background-color: #007bff; /* kék háttér */
+  color: white; /* Fehér szöveg */
+  border-radius: 5px; /* Lekerekített sarkok */
+  align-self: center; /* Középre igazítás */
+}
+
+/* gombok ha egeret fölé visszük */
+button:hover {
+  background-color: #0056b3; /* sötétebb kék */
+}
+
+/* kérdéseltávolítás gomb */
+.remove-button {
+  background-color: red; /* piros háttér*/
+}
+/* kérdéseltávolítás gomb ha egeret fölé visszük */
+.remove-button:hover {
+  background-color: darkred; /* sötétebb piros*/
+}
+.question-container{
+  border: 1px solid #ddd; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 5px;
+}
+.custom-question-select{
+  width: 80%;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+}

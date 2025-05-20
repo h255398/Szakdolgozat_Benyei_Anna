@@ -1,0 +1,127 @@
+/* alap, bodyra */
+body {
+  font-family: Arial, sans-serif; /* betűtípus */
+  margin: 0; /* ne legyen margó */
+  padding: 20px; /* belső térköz */
+  margin-top: 50px; /* fejléc miatt kell, hogy ne takarja a tartalmat */
+  background-image: url("../oldalra_kepek/hatterkep.jfif"); /* háttér */
+  background-size: cover; /* háttér teljesen látszódjon, töltse ki a teret */
+  background-position: center; /* háttér középen legyen */
+  background-repeat: no-repeat; /* háttér ne ismétlődjön */
+  background-attachment: fixed; /* háttér fix */
+}
+
+/* fejléc */
+header {
+  position: fixed; /* fix pozi */
+  top: 0; /* lap tetején */
+  left: 0; /* bal oldalra szélre */
+  right: 0; /* jobb oldalra is zsélre */
+  background-color: #4caf50; /* zöld háttér */
+  padding: 10px; /* belső térköz */
+  z-index: 1000; /* mindig minden felett maradjn és látszódjon */
+  display: flex; /* flexbox */
+  justify-content: space-between; /* az elemek egyenletesen rendeződjenek */
+  align-items: center; /* középre igazitás */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+}
+
+header h1 {
+  margin: 0; /* ne legyen margó */
+  color: white; /* fehér szöveg */
+  animation: scroll-text 10s linear infinite; /* görgős szöveg animáció beállítása (köszönöm hogy kitöltötték stb..)*/
+}
+
+/* animáció */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%); /* kezdő pozi jobbra tolva teljesen */
+  }
+  100% {
+    transform: translateX(-100%); /* végső pozi teljesen bal oldalt */
+  }
+}
+
+/* fő rész ahol lesznek a képek */
+.container {
+  background-color: white; /* fehér háttér */
+  padding: 10px; /* belső térköz */
+  border-radius: 8px; /* sarkok lekerekítése */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* árnyék */
+  max-width: 600px; /* max szélesség */
+  margin: 0px auto; /* középre */
+}
+
+/* számok hanyadik kép */
+h3{
+  text-align: center; /* középre */
+}
+
+/* képek */
+img {
+  display: block; /* blokk */
+  max-width: 100%; /* kép ne legyen nagyobb mint a fehér rész egyébként */
+  height: auto; /* arányokat tartsa */
+  margin: 0 auto; /* középre */
+  border-radius: 8px; /* lekerekített sarkok */
+}
+
+/* pontszámok */
+form {
+  display: flex; /* felxbox  */
+  flex-direction: column; /* egymás alá lenne, de így jól helyezkedik el valamiért, row a sorban */
+  align-items: center; /* középre */
+}
+
+
+/* pontozás */
+.pontozas-container {
+  display: flex; /* flexbox */
+  justify-content: center; /* középre */
+  gap: 10px; /* elemek közötti térköz */
+  margin: 20px 0; /* 20px térköz felül és alul */
+}
+
+/* a kör stílusa */
+.pontozas-kor {
+  width: 60px; /* szélesség */
+  height: 60px; /* magasság */
+  border-radius: 50%; /* kerek legyen */
+  border: 2px solid #000; /* 2px vastag fekete szegély */
+  background-color: #f0f0f0; /* világosszürke háttér */
+  margin: 0 15px; /* 15px térköz mindkét oldalon */
+  cursor: pointer; /* egérként jelenik meg */
+  display: flex; /* felxbox */
+  align-items: center; /* középre */
+  justify-content: center; /* vízszintes középre */
+  font-size: 20px; /* betűméret */
+}
+
+/* kör ha egeret rávisszük */
+.pontozas-kor:hover {
+  background-color: green; /* háttér legyen akkor zöld */
+}
+
+/* ha már kijelötem melyik pontozást akarom */
+.pontozas-kor.selected {
+  background-color: green; /* háttér maradjon zöld */
+  color: white; /* szám benne fehér */
+}
+
+/* tovább gomb */
+#tovabb-gomb {
+  display: none; /* alapból nem látható */
+  padding: 15px 20px; /* belső térköz */
+  background-color: #007bff; /* kék háttér */
+  color: white; /* fehér szöveg */
+  border: none; /* nincs szegély */
+  border-radius: 5px; /* lekerekített sarkok */
+  cursor: pointer; /* egérként jelenik meg */
+  text-align: center; /* szöveg középre */
+  font-size: 1em; /* betűméret */
+}
+
+/* tovább gomb ha rávisszük az egeret */
+#tovabb-gomb:hover {
+  background-color: 0056b3; /* sötétebb kék háttérszín */
+}

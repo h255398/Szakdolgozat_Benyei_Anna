@@ -1,0 +1,101 @@
+/* reszponzív pl tablet */
+@media (max-width: 768px) {
+  .project-box {
+    width: calc(
+      50% - 20px
+    ); /* két box egy sorban, 50%-os szélesség, levonva 20px margó */
+  }
+}
+
+/* reszponzív pl teló */
+@media (max-width: 480px) {
+  .project-box {
+    width: calc(
+      100% - 20px
+    ); /* egy box egy sorban, 100%-os szélesség, levonva 20px margó */
+  }
+}
+/* alap bodyra */
+body {
+  background-color: #f4f4f4; /* háttér */
+  margin: 0; /* nincs margó */
+  padding: 20px; /* belső térköz */
+}
+/* lényegi rész konténer */
+.container {
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* lehetnek több sorba */
+  justify-content: center; /* középre */
+  margin-top: 90px; /* felső margó */
+}
+/* ha rávisszük az egeret a projektre*/
+.project-box:hover {
+  transform: scale(1.02); /* kicsit megnövekszik */
+}
+/* projektek boxonként*/
+.project-box {
+  background-color: white; /* fehér háttér */
+  border: 1px solid #ccc; /* szürke keret */
+  border-radius: 10px; /* lekerekített sarkok */
+  padding: 10px; /* belső térköz */
+  margin: 10px; /* margó */
+  width: calc(30% - 20px); /* 30%-os szélesség, levonva 20px margó */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* árnyék */
+  transition: transform 0.2s; /* átmenet */
+  display: flex; /* flexbox */
+  flex-direction: column; /* egymás alatt ????????????????? */
+  justify-content: flex-start; /* tartalom felül kezdődjön */
+  align-items: center; /* középre */
+  text-align: center; /* középre */
+  height: auto; /* magasság */
+}
+/* projekt boxban a kép */
+.project-box img {
+  max-width: 100%; /* szélesség */
+  max-height: 300px; /* max magassága */
+  object-fit: contain; /* arányosan */
+  border-radius: 10px; /* lekerekített sarkok */
+  margin-bottom: 10px; /* margó lent */
+}
+/* projekt neve */
+.project-name {
+  font-weight: bold; /* félkövér */
+  margin: 10px 0; /* margó */
+  font-size: 1.2em; /* betűméret */
+  color: black; /* fekete */
+}
+/* projekt neve link */
+.project-name a {
+  text-decoration: none; /* aláhúzás eltávolítása */
+  color: inherit; /* maradjon ugyanaz a szín */
+}
+/* projekt neve link ha fölé visszük az egeret */
+.project-name a:hover {
+  color: blue; /* kékz */
+}
+/* projekt leírása */
+.project-description {
+  padding: 10px; /* belső térköz */
+  font-size: 0.9em; /* betűméret */
+  max-height: 4.5em; /* max magasság */
+  overflow: hidden; /* ha túlmegy a szöveg elrejteni */
+  text-overflow: ellipsis; /* ... megjelenítése a túl hosszú szövegnél */
+  line-height: 1.5em; /* sor magasság */
+  white-space: normal; /* sorvégi törés */
+  color: #666; /* szürke */
+  font-size: 14px; /* betűméret  */
+  text-align: center; /* középre */
+}
+/* kitöltések száma */
+.project-kitoltesek {
+  text-align: center; /* középre */
+  font-weight: bold; /* félkövér */
+  margin-top: 5px; /* felső margó */
+  color: #444; /* szürke */
+}
+/* */
+.project-target {
+  text-align: center; /* középre */
+  margin-top: 10px; /* felső margó */
+  color: #444; /* szürke */
+}
